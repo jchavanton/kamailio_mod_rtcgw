@@ -48,18 +48,16 @@ static stat_export_t mod_stats[] = {
 };
 
 struct module_exports exports = {
-	"rtc_gw",
-	DEFAULT_DLFLAGS, /* dlopen flags */
-	cmds,
-	mod_params,
-	mod_stats,   /* exported statistics */
-	0,     /* exported MI functions */
-	mod_pvs,     /* exported pseudo-variables */
-	0,           /* extra processes */
-	mod_init,
-	0,           /* reply processing */
-	mod_destroy, /* destroy function */
-	child_init
+	"rtc_gw",        /* 1 module name */
+	DEFAULT_DLFLAGS, /* 2 dlopen flags */
+	cmds,            /* 3 exported functions */
+	mod_params,      /* 4 exported parameters */
+	0,               /* 5 exported RPC functions */
+	mod_pvs,         /* 6 exported pseudo-variables */
+	0,               /* 7 response function */
+	mod_init,        /* 8 module initialization function */
+	child_init,      /* 9 per-child init function */
+	mod_destroy      /* 0 destroy function */
 };
 
 /**
