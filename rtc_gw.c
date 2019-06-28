@@ -43,10 +43,6 @@ static param_export_t mod_params[]={
 	{0,0,0}
 };
 
-static stat_export_t mod_stats[] = {
-	{0,0,0}
-};
-
 struct module_exports exports = {
 	"rtc_gw",        /* 1 module name */
 	DEFAULT_DLFLAGS, /* 2 dlopen flags */
