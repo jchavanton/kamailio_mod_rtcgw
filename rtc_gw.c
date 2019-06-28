@@ -97,7 +97,7 @@ void rtc_signal_handler(int signum) {
  * stop.
  */
 static int child_init(int rank) {
-	signal(SIGINT,rtc_signal_handler);
+	// signal(SIGINT,rtc_signal_handler);
 	int rtn = 0;
 	return(rtn);
 }
